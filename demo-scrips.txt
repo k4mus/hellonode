@@ -1,0 +1,500 @@
+  152  gcloud compute ssh crucible
+  153  gcloud compute ssh crucible
+  154  clear
+  155  gcloud compute ssh crucible
+  156  exit
+  157  gcloud compute ssh jira-node2
+  158  ls
+  159  cd certificados/
+  160  ls
+  161  pwd
+  162  openssl pkcs12 -name crucible -export -in crucible.cert -inkey crucible.key -out crucible.p12
+  163  openssl pkcs12 -name crucible -export -in crucible.crt -inkey crucible.key -out crucible.p12
+  164  openssl pkcs12 -name crucible -export -in crucible.crt -inkey crucible.key -out crucible.p12
+  165  ls
+  166  cat crucible.p12 
+  167  clear
+  168  openssl genrsa -out crucible.key 2048
+  169  openssl req -new -key crucible.key -out crucible.csr
+  170  openssl x509 -req -days 365 -in crucible.csr -signkey crucible.key -out crucible.crt
+  171  gcloud compute ssl-certificates list
+  172  cat crucible.crt 
+  173  cat crucible.key 
+  174  cat crucible.key 
+  175  cat crucible.key 
+  176  clear
+  177  cat crucible.crt 
+  178  cat crucible.key
+  179  gcloud compute ssh jira-node1
+  180  gcloud compute ssh  confluence-synchrony-node1 
+  181  gcloud compute ssh crucible
+  182  gcloud compute ssh crucible
+  183  gcloud compute ssh crucible
+  184  gcloud compute ssh crucible
+  185  gcloud compute ssh crucible
+  186  gcloud compute ssh crucible
+  187  gcloud compute ssh jira-node1
+  188  gcloud compute ssh  jira-node1
+  189  gcloud compute ssh  jira-node2
+  190  gcloud compute ssh crucible
+  191  gcloud compute ssh crucible
+  192  gcloud compute machine-types list
+  193  gcloud compute machine-types list |grep custom
+  194  gcloud compute machine-types list |grep custom
+  195  gcloud compute machine-types list |grep us-east
+  196  gcloud compute machine-types list |grep us-east1
+  197  gcloud compute machine-types list |grep us-east1-b
+  198  gcloud compute machine-types list |grep us-east1
+  199  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::crucible-infra]'
+  200  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::crucible-infra]'
+  201  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::crucible-infra]'
+  202  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::crucible-infra]'
+  203  gcloud sql tiers list
+  204  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  205  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  206  ls
+  207  cd cookbooks/
+  208  ls
+  209  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  210  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  211  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  212  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  213  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  214  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  215  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  216  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  217  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  218  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  219  clear && sudo chef-client -z --runlist 'recipe[latam-atlassian::postgre-sql]'
+  220  gcloud sql instances create myinstance --cpu=2 --memory=7680MiB         --database-version=POSTGRES_9_6
+  221  git add latam-atlassian/
+  222  git commit
+  223   git remote add origin http://fmoreno@192.168.1.77:7990/scm/fmoreno/chef-gcloud.git
+  224  git push -u origin master
+  225  git push -u origin master
+  226  cd
+  227  ls
+  228  cd proyectos/
+  229  ls
+  230  mkdir gcloud-scritps
+  231  cd gcloud-scritps/
+  232  git init
+  233  git add --all
+  234  git commit -m "comint inicial"
+  235  git remote add origin http://fmoreno@192.168.1.77:7990/scm/fmoreno/script-gcloud.git
+  236  git push -u origin master
+  237  ls
+  238  git config
+  239  git config get-all
+  240  git config --get-all
+  241  git config --get-all
+  242  git
+  243  git history
+  244  git log
+  245  git show
+  246  ls
+  247  git commit -m "Initial Commit"
+  248  pwd
+  249  gcloud sql instances create myinstance --cpu=6 --memory=16384MiB --database-version=POSTGRES_9_6 --region us-east1 --storage-type SSD --storage-size 30 --project fmf-labs
+  250  export instance_prop =--cpu=6 --memory=16384MiB --database-version=POSTGRES_9_6 --region us-east1 --storage-type SSD --storage-size 30 --project fmf-labs
+  251  export instance_prop ="--cpu=6 --memory=16384MiB --database-version=POSTGRES_9_6 --region us-east1 --storage-type SSD --storage-size 30 --project fmf-labs"
+  252  export instance_prop ='--cpu=6 --memory=16384MiB --database-version=POSTGRES_9_6 --region us-east1 --storage-type SSD --storage-size 30 --project fmf-labs'
+  253  instance_prop="--cpu=6 --memory=16384MiB --database-version=POSTGRES_9_6 --region us-east1 --storage-type SSD --storage-size 30 --project fmf-labs"
+  254  echo $instance_prop
+  255  gcloud sql instances describe  postgresql-confluence
+  256  gcloud sql instances describe  postgresql-confluence |grep - ipAddress:
+  257  gcloud sql instances describe  postgresql-confluence |grep - ipAddress
+  258  gcloud sql instances describe  postgresql-confluence |grep ipAddress
+  259  gcloud sql instances describe  postgresql-confluence |grep ipAddress 
+  260  gcloud sql instances describe  postgresql-confluence |grep ipAddress:
+  261  project ="fmf-labs"
+  262  instance_sql_prop="--cpu=6 --memory=16384MiB --database-version=POSTGRES_9_6 --region us-east1 --storage-type SSD --storage-size 30 --project $project"
+  263  gcloud sql instances create postgresql-crucible $instance_prop
+  264  gcloud sql databases create  crucible -i postgresql-crucible --async
+  265  gcloud sql databases create  crucible -i postgresql-crucible --async --project fmf-labs
+  266  echo $project
+  267  project ="fmf-labs"
+  268  project="fmf-labs"
+  269  echo $project
+  270  region="us-east1"
+  271  gcloud compute addresses create jira-ip --region $region --project $project
+  272  opts_gcloud="--region $region --project $project"
+  273  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --allow tcp:80, tcp:443, tcp:8080, tcp:8090, tcp:8091, tcp:5701, tcp:7990, tcp:7999, tcp:8060 $opts_gcloud
+  274  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --allow tcp:80,tcp:443,tcp:8080,tcp:8090,tcp:8091,tcp:5701,tcp:7990,tcp:7999,tcp:8060 $opts_gcloud
+  275  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --allow tcp:80,tcp:443,tcp:8080,tcp:8090,tcp:8091,tcp:5701,tcp:7990,tcp:7999,tcp:8060 --project $project
+  276  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --allow tcp:80,tcp:443,tcp:8080,tcp:8090,tcp:8091,tcp:5701,tcp:7990,tcp:7999,tcp:8060 --network delivery2-latam ; default "delivery2-latam" --project $project
+  277  project="fmf-labs"
+  278  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --allow tcp:80,tcp:443,tcp:8080,tcp:8090,tcp:8091,tcp:5701,tcp:7990,tcp:7999,tcp:8060 --network delivery2-latam ; default "delivery2-latam" --project $project
+  279  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --allow tcp:80,tcp:443,tcp:8080,tcp:8090,tcp:8091,tcp:5701,tcp:7990,tcp:7999,tcp:8060 --network delivery2-latam ; default "delivery2-latam" --project fmf-labs
+  280  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --allow tcp:80,tcp:443,tcp:8080,tcp:8090,tcp:8091,tcp:5701,tcp:7990,tcp:7999,tcp:8060 --network delivery2-latam --project fmf-labs
+  281  gcloud compute firewall-rules list
+  282  gcloud compute firewall-rules list -sort-by priority     --format="table(
+  283          name,
+  284          network,
+  285          direction,
+  286          priority,
+  287          sourceRanges.list():label=[SRC_RANGES],
+  288          destinationRanges.list():label=[DEST_RANGES],
+  289          allowed[].map().firewall_rule().list():label=ALLOW,
+  290          denied[].map().firewall_rule().list():label=DENY,
+  291          sourceTags.list():label=[SRC_TAGS],
+  292          targetTags.list():label=[TARGET_TAGS]
+  293          )"
+  294  gcloud compute firewall-rules list -sort-by priority     --format="table(
+  295          network,
+  296          direction,
+  297          priority,
+  298          sourceRanges.list():label=[SRC_RANGES],
+  299          destinationRanges.list():label=[DEST_RANGES],
+  300          allowed[].map().firewall_rule().list():label=ALLOW,
+  301          denied[].map().firewall_rule().list():label=DENY,
+  302          sourceTags.list():label=[SRC_TAGS],
+  303          targetTags.list():label=[TARGET_TAGS]
+  304          )"
+  305  gcloud compute firewall-rules list --format="table(
+  306          network,
+  307          direction,
+  308          priority,
+  309          sourceRanges.list():label=[SRC_RANGES],
+  310          destinationRanges.list():label=[DEST_RANGES],
+  311          allowed[].map().firewall_rule().list():label=ALLOW,
+  312          denied[].map().firewall_rule().list():label=DENY,
+  313          sourceTags.list():label=[SRC_TAGS],
+  314          targetTags.list():label=[TARGET_TAGS]
+  315          )"
+  316  gcloud compute firewall-rules list --format="table(
+  317          name,network,
+  318          direction,
+  319          priority,
+  320          sourceRanges.list():label=[SRC_RANGES],
+  321          destinationRanges.list():label=[DEST_RANGES],
+  322          allowed[].map().firewall_rule().list():label=ALLOW,
+  323          denied[].map().firewall_rule().list():label=DENY,
+  324          sourceTags.list():label=[SRC_TAGS],
+  325          targetTags.list():label=[TARGET_TAGS]
+  326          )"
+  327  gcloud compute firewall-rules list --format="table(
+  328          name,subnetwork,
+  329          direction,
+  330          priority,
+  331          sourceRanges.list():label=[SRC_RANGES],
+  332          destinationRanges.list():label=[DEST_RANGES],
+  333          allowed[].map().firewall_rule().list():label=ALLOW,
+  334          denied[].map().firewall_rule().list():label=DENY,
+  335          sourceTags.list():label=[SRC_TAGS],
+  336          targetTags.list():label=[TARGET_TAGS]
+  337          )"
+  338  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --source-ranges 10.142.0.0/20 --allow tcp:80,tcp:443,tcp:8080,tcp:8090,tcp:8091,tcp:5701,tcp:7990,tcp:7999,tcp:8060 --network delivery2-latam --project fmf-labs
+  339  gcloud compute firewall-rules create delivery2-latam-allow-internal-lb --target-tags internal-lb --source-ranges 10.142.0.0/20 --allow tcp:80,tcp:443,tcp:8080,tcp:8090,tcp:8091,tcp:5701,tcp:7990,tcp:7999,tcp:8060 --network delivery2-latam --project $project
+  340  ls
+  341  git add *
+  342  git commit
+  343  git push origin master
+  344  git add *
+  345  git commit
+  346  git push
+  347  git push origen master
+  348  git push  master origin
+  349  git push origin master
+  350  cd
+  351  cd .chef
+  352  chef-client -z --runlist 'recipe[webinar1-infra::up-app-instance]'
+  353  chef-client -z --runlist 'recipe[latam-atlassian::crucible-infra]'
+  354  ls
+  355  chef-client -z --runlist 'recipe[latam-atlassian::crucible-infra]'
+  356  sudo chef-client -z --runlist 'recipe[latam-atlassian::crucible-infra]'
+  357  sudo chef-client -z --runlist 'recipe[latam-atlassian::crucible-infra]'
+  358  cd cookbooks/
+  359  git add latam-atlassian/
+  360  git commit
+  361  git push
+  362  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  363  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  364  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  365  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  366  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  367  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  368  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  369  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  370  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  371  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  372  sudo chef-client -z --runlist 'recipe[latam-atlassian::demo]'
+  373  git add latam-atlassian/
+  374  git commit
+  375  /Users/fernando/Downloads/terraform ; exit;
+  376  terraform
+  377  cd Downloads/
+  378  ls
+  379  ls -al
+  380  terraform
+  381  ./terraform
+  382  echo $PATH
+  383  ls -al
+  384  mkdir terraform
+  385  cd terraform
+  386  rm terraform
+  387  mkdir terraform
+  388  unzip terraform_0.11.4_darwin_amd64.zip  terraform
+  389  ls
+  390  mv terraform_0.11.4_darwin_amd64.zip terraform/terraform_0.11.4_darwin_amd64.zip
+  391  cd terraform/
+  392  ls
+  393  unzip terraform_0.11.4_darwin_amd64.zip 
+  394  ls
+  395  ls -al
+  396  pwd
+  397  export PATH=$PATH:/Users/fernando/Downloads/terraform
+  398  cd
+  399  terraform
+  400  gcloud organizations list
+  401  gcloud beta billing accounts list
+  402  top
+  403  gcloud compute ssh jira-confluence
+  404  gcloud compute ssh jira-confluence
+  405  gcloud compute ssh jira-confluence
+  406  clear
+  407  gcloud compute ssh jira-confluence
+  408  brew install emacs --with-cocoa
+  409  gcloud container clusters create working-space --zone us-central1-a --additional-zones us-central1-b,us-central1-c
+  410  gcloud container clusters create working-space --zone us-east1-b --additional-zones us-central1-b,us-central1-c
+  411  gcloud components install kubectl
+  412  pwd
+  413  mkdir kubernete
+  414  cd kubernete/
+  415  ls
+  416  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/darwin/amd64/kubectl
+  417   chmod +x ./kubectl
+  418  sudo mv ./kubectl /usr/local/bin/kubectl
+  419  gcloud components install kubectl
+  420  kubectl version
+  421  kubectl cluster-info
+  422  kubectl cluster-info dump
+  423  brew install bash-completion
+  424  kubectl completion bash > $(brew --prefix)/etc/bash_completion.d/kubectl
+  425  kubectl cluster-info
+  426  kubectl cluster-info dump
+  427  cat ~/.kube/config
+  428  kube-up.sh
+  429  ls
+  430  ls
+  431  kubectl version
+  432  rm /usr/local/bin/kubectl
+  433  kubectl version
+  434  curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.1/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+  435  tail -n +1 -- out/*.sha256
+  436   kubectl version
+  437  kubectl cluster-info
+  438  kubectl completion bash > $(brew --prefix)/etc/bash_completion.d/kubectl
+  439  sudo vim ~/.zshrc
+  440  kubectl run hello-world --replicas=2 --labels="run=load-balancer-example" --image=gcr.io/google-samples/node-hello:1.0  --port=8080
+  441  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/darwin/amd64/kubectl
+  442   chmod +x ./kubectl
+  443  sudo mv ./kubectl /usr/local/bin/kubectl
+  444  kubectl cluster-info
+  445  kubectl version
+  446  sudo cp /etc/kubernetes/admin.conf $HOME/
+  447  ls
+  448  ll
+  449  ls -al
+  450  docker ps
+  451  +go
+  452  go
+  453  ls
+  454  cd ..
+  455  ls
+  456  cd Downloads/
+  457  ls
+  458  cd kubernetes
+  459  ls
+  460  ll
+  461  ls server/
+  462  find .
+  463  find . |grep config
+  464  find . |grep admin
+  465  find . |grep admin.config
+  466  ll
+  467  hack/local-up-cluster.sh
+  468  ls
+  469  find . |grep local-up-cluster
+  470  brew cask install minikube
+  471  rm -f /usr/local/bin/minikube
+  472  brew cask install minikube
+  473  brew install xhyve
+  474  brew install asdf
+  475  kubectl
+  476  kubectl -version
+  477  kubectl --version
+  478  kubectl version
+  479  minikube version
+  480  helm init
+  481  kubectl get deployment tiller-deploy --namespace kube-system
+  482  ls
+  483  cd hack/
+  484  ls
+  485  cd ..
+  486  cat  README.md 
+  487  docket
+  488  docker
+  489  etd
+  490  etcd
+  491  brew install docker-machine-driver-xhyve
+  492  sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+  493  sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+  494  brew install kubectl
+  495  brew link kubernetes-cli
+  496  brew link --overwrite kubernetes-cli
+  497  curl --proxy "" https://cloud.google.com/container-registry/
+  498  docker images
+  499  minikube start --vm-driver=xhyve
+  500  minikube start --vm-driver=xhyve
+  501  cd
+  502  la
+  503  lñl
+  504  ll
+  505  vim ~/.bashrc
+  506  vim ~/.profile
+  507  alias ll='ls -lG'
+  508  ll
+  509  ll -al
+  510  ll .ssh/
+  511  ls -d -1 $PWD/*.*
+  512  ls -d -1 $PWD/.ssh/*.*
+  513  ls -d -1 $PWD/*.*
+  514  gcloud beta organizations list
+  515   gcloud components update
+  516  export
+  517  ls /usr/local/
+  518  brew remove kubectl
+  519   gcloud components update
+  520  kubectl
+  521  gcloud beta organizations list
+  522  gcloud alpha billing accounts list
+  523  gcloud alpha billing accounts list
+  524  gcloud alpha billing accounts list --filter open=true
+  525  curl https://cloudbilling.googleapis.com/v1/billingAccounts
+  526  gcloud alpha billing projects link ${TF_ADMIN} \
+  527  terraform
+  528  terraform init
+  529  terraform plan
+  530  ls
+  531  ls -al
+  532  cd kubernete/
+  533  ls
+  534  ls -a
+  535  cd ..
+  536  rm -f kubernete/
+  537  ls
+  538  rm -ef kubernete/
+  539  rm -rf kubernete/
+  540  ll
+  541  terraform init
+  542  nodesudo yum install -y yum-utils   device-mapper-persistent-data \
+  543  ls
+  544  kubectl:
+  545  kubectl
+  546  ls
+  547  cd proyectos/
+  548  ls
+  549  mkdir kubernete demo
+  550  var http = require('http');
+  551  var handleRequest = function(request, response) {
+  552    response.writeHead(200);
+  553  }
+  554  var www = http.createServer(handleRequest);
+  555  www.listen(8080);ls
+  556  cd
+  557  cd proyectos/
+  558  cd kubernete/
+  559  ls
+  560  ls
+  561  ll
+  562  ls
+  563  ls -al
+  564  cd ..
+  565  ls
+  566  rm -r kubernete/ demo/
+  567  mkdir kubernete-demo
+  568  cd kubernete-demo/
+  569  vim server.js
+  570  node server.js 
+  571  vim Dockerfile
+  572  docker build -t gcr.io/fmf-labs/hello-node:v1
+  573  docker build -t "gcr.io/fmf-labs/hello-node:v1"
+  574  docker build -t "gcr.io/fmf-labs/hello-node:v1"
+  575  docker build -t 
+  576  docker build 
+  577  ls
+  578  cdl
+  579  cd..
+  580  ls
+  581  cd ..
+  582  mv kubernete-demo/ hellonode/
+  583  ls
+  584  cd hellonode/
+  585  docker build -t "gcr.io/fmf-labs/hello-node:v1"
+  586  docker run hello-world
+  587  docker --version
+  588  docker run hello-world
+  589  docker run hello-world
+  590  docker run hello-world
+  591  docker run hello-world
+  592  docker run hello-world
+  593  docker run hello-world
+  594  docker run hello-world
+  595  docker run hello-world
+  596  cler
+  597  clear
+  598  docker run hello-world
+  599  ll
+  600  docker build -t gcr.io/fmf-labs/hello-node:v1 .
+  601  docker run -d -p 8080:8080 gcr.io/fmf-labs/hello-node:v1
+  602  curl http://localhost:8080
+  603  docker ps
+  604  gcloud docker push gcr.io/fmf-labs/hello-node:v1
+  605  gcloud docker push gcr.io/fmf-labs/hello-node:v1
+  606  gcloud docker 
+  607  gcloud docker push 
+  608  gcloud docker --help
+  609  gcloud docker push gcr.io/fmf-labs/hello-node:v1
+  610  gcloud docker push "gcr.io/fmf-labs/hello-node:v1"
+  611  gcloud docker --help
+  612  docker push gcr.io/fmf-labs/hello-node:v1
+  613  gcloud container clusters get-credentials hello-world
+  614  gcloud container clusters get-credentials hello-world
+  615  kubectl version
+  616   gcloud dataproc clusters create my_cluster
+  617  gcloud beta container --project "fmf-labs" clusters create "hello-world" --zone "us-east1-b" --username "admin" --cluster-version "1.8.8-gke.0" --machine-type "n1-standard-1" --image-type "COS" --disk-size "100" --scopes "https://www.googleapis.com/auth/compute","https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append" --num-nodes "2" --network "default" --enable-cloud-logging --enable-cloud-monitoring --subnetwork "default"
+  618  gcloud container clusters get-credentials hello-world
+  619  kubectl run hello-node --image=gcr.io/PROJECT_ID/hello-node:v1 --port=8080
+  620  kubectl run hello-node --image=gcr.io/fmf-labs/hello-node:v1 --port=8080
+  621  kubectl get deployments
+  622  kubectl get pods
+  623  kubectl logs hello-node-5fcd5648bf-tw4xh
+  624  kubectl logs hello-node-5fcd5648bf-tw4xh
+  625  kubectl logs hello-node-5fcd5648bf-tw4xh
+  626  kubectl cluster-info
+  627  kubectl get events
+  628  kubectl config view
+  629  kubectl expose deployment hello-node --type="LoadBalancer"
+  630  kubectl get services hello-node
+  631  kubectl get services hello-node
+  632  kubectl get services hello-node
+  633  kubectl get services hello-node
+  634  kubectl get services hello-node
+  635  curl 35.196.105.209:8080
+  636  kubectl scale deployment hello-node --replicas=4
+  637  kubectl get deployment
+  638  kubectl get pods
+  639  ls
+  640  vim server.js 
+  641  vim server.js 
+  642  docker build -t gcr.io/fmf-labs/hello-node:v2 .
+  643  gcloud docker push gcr.io/PROJECT_ID/hello-node:v2
+  644  docker push gcr.io/PROJECT_ID/hello-node:v2
+  645  docker push gcr.io/fmf-labs/hello-node:v2
+  646  kubectl set image deployment/hello-node hello-node=gcr.io/PROJECT_ID/hello-node:v2
+  647  kubectl set image deployment/hello-node hello-node=gcr.io/fmf-labs/hello-node:v2
+  648  kubectl get deployments
+  649  curl 35.196.105.209:8080
+  650  curl 35.196.105.209:8080
+  651  history >>demo-scrips.txt
