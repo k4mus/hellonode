@@ -22,5 +22,8 @@ resource "google_container_cluster" "gcp_kubernetes" {
     }
 
     tags = ["dev", "work"]
+    machine_type = "g1-small"
+    disk_size_gb = 50
   }
+
 }
